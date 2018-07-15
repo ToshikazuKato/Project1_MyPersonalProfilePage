@@ -1,3 +1,4 @@
+
 /* Global Layout Set-up */
 * {
   box-sizing: border-box;
@@ -58,7 +59,7 @@ a:hover {
 
 header {
   text-align: center;
-  background-image: url('images/minatomiraiNightView2.jpg');
+  background-image: url('images/minatomiraiNightView.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -67,6 +68,7 @@ header {
   transition: all 0.5s;
   filter:grayscale(1);
   min-height: 55vh;
+
 }
 
 header:hover{
@@ -77,37 +79,29 @@ header:hover{
 header {
   line-height: 1.5;
 }
-header .profile-image {
-  margin-top: 50px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid white;
-  transition: all .7s;
-  filter: blur(4px) grayscale(1);
-}
-header .profile-image:hover {
-  transform: scale(1.2) rotate(7deg);
-  filter: blur(0) grayscale(0);
 
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 35vh;
+  padding-right: 10%;
+  padding-left:10%;
 }
-.tag {
-  background-color: #efefef;
-  color: black;
-  padding: 10px;
-  border-radius: 5px;
-  display: table;
-  margin: 10px auto;
+
+.flex{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
-.location {
-  background-color: #000;
-  color: #4286f4;
+
+.item{
+  flex-grow: 1;
 }
+
 .card {
-  margin: 30px;
-  padding: 20px 40px 40px;
-  max-width: 500px;
-  text-align: left;
+  margin: 10px;
+  padding: 10px 20px 20px;
   background: #fff;
   border-bottom: 3px solid #ccc;
   border-top: 3px solid #ccc;
@@ -116,20 +110,6 @@ header .profile-image:hover {
 }
 .card:hover {
   border-color: #4286f4;
-}
-
-ul.skills {
-  padding: 0;
-  text-align: center;
-}
-
-.skills li {
-  border-radius: 6px;
-  display: inline-block;
-  background: #4286f4;
-  color: white;
-  padding: 5px 10px;
-  margin: 2px;
 }
 
 footer {
@@ -183,16 +163,7 @@ a.social:hover {
 }
 
 /* Styles for larger screens */
-@media screen and (min-width: 720px) {
-
-  .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex;
-      max-width: 1200px;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin: 0 auto;
-  }
+@media screen and (min-width: 768px) {
 
   header {
     min-height: 470px;
@@ -206,6 +177,13 @@ a.social:hover {
 
   main {
     padding-top: 20px;
+  }
+
+  .card{
+    min-height: 25vh;
+    max-height: 30vh;
+    min-width: 15vw;
+    max-width: 25vw;
   }
 
   main p {
